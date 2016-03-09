@@ -1,10 +1,10 @@
 <?php
 class Auth{
-	public static login($username){
+	public static function login($username){
 
 	}
 
-	public static logout(){
+	public static function logout(){
 		session_start();
 		unset($_SESSION['user_id']);
 	}
