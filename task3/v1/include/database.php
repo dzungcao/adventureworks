@@ -29,5 +29,12 @@ class Database{
 		mysqli_close($conn);
 		return mysqli_fetch_array($result);
 	}
+    
+    public function getSaleOrders(){
+        $conn = self::getConnection();
+		$result = mysqli_query($conn, "SELECT * FROM salesorderheader");
+		mysqli_close($conn);
+		return mysqli_fetch_array($result);
+    }
 }
 
